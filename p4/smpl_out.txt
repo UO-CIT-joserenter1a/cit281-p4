@@ -1,0 +1,72 @@
+** Testing getQuestions **
+-------------------------------
+-> getQuestions():
+[ 'Q1', 'Q2', 'Q3' ]
+
+** Testing getAnswers **
+-------------------------------
+-> getAnswers():
+[ 'A1', 'A2', 'A3' ]
+
+** Testing getQuestionsAnswers **
+-------------------------------
+-> getQuestionsAnswers():
+[
+  { question: 'Q1', answer: 'A1' },
+  { question: 'Q2', answer: 'A2' },
+  { question: 'Q3', answer: 'A3' }
+]
+
+** Testing getQuestion **
+-------------------------------
+-> getQuestion():
+{
+  error: 'Question number must be an integer',
+  question: '',
+  number: ''
+}
+-> getQuestion(0):
+{ error: 'Question number must be >= 1', question: '', number: '' }
+-> getQuestion(1):
+{ error: '', question: 'Q1', number: 1 }
+-> getQuestion(4):
+{
+  error: 'Question number must be less than the number of questions (3)',
+  question: '',
+  number: ''
+}
+
+** Testing getAnswer **
+-------------------------------
+-> getAnswer():
+{ error: 'Answer number must be an integer', answer: '', number: '' }
+-> getAnswer(0):
+{ error: 'Answer number must be >= 1', answer: '', number: '' }
+-> getAnswer(1):
+{ error: '', answer: 'A1', number: 1 }
+-> getAnswer(4):
+{
+  error: 'Answer number must be less than the number of questions (3)',
+  answer: '',
+  number: ''
+}
+
+** Testing getQuestionAnswer **
+-------------------------------
+-> getQuestionAnswer():
+{
+  error: 'Question number must be an integer',
+  question: '',
+  number: ''
+}
+-> getQuestionAnswer(0):
+{ error: 'Question number must be >= 1', question: '', number: '' }
+-> getQuestionAnswer(1):
+{ error: '', question: 'Q1', number: 1, answer: 'A1' }
+-> getQuestionAnswer(4):
+{
+  error: 'Question number must be less than the number of questions (3)',
+  question: '',
+  number: ''
+}
+{ error: '', question: 'Q1', number: 1, answer: 'A1' } 
